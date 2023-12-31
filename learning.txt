@@ -1,0 +1,29 @@
+To set a collection variable
+pm.collectionVariables.set("new_collection_variable_name",value)
+
+To set an environment variable
+pm.environment.set("new_environment_variable_name", value)
+
+To get a collection variable
+pm.collectionVariables.get("variable_name")
+
+To get an environment variable
+pm.environment.get("variable_name")
+
+To call next request
+postman.setNextRequest("Request name")
+
+To get json data
+pm.response.json()
+
+To get reponse as a string
+pm.response.text()
+
+To get response details
+pm.response
+
+
+==================================================================================================================
+
+Assertions
+
