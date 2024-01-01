@@ -27,3 +27,9 @@ pm.response
 
 Assertions
 
+
+
+==================================================================================================================
+
+To read heading name from csv file for data driven testing
+pm.variables.replaceIn("{{heading_name}}")
