@@ -50,6 +50,8 @@ pm.response.to.have.status(200)
 let jsonData = pm.response.json()
 pm.expect(jsonData).to.have.property("key")
 
+pm.expect(jsonData).to.have.all.keys("key1", "key2")
+
 pm.expect(jsonData.Msg).t0.eql("Msg")
 
 pm.response.to.have.header("Content-Type")
