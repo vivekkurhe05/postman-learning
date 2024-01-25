@@ -52,7 +52,7 @@ pm.expect(jsonData).to.have.property("key")
 
 pm.expect(jsonData).to.have.all.keys("key1", "key2")
 
-pm.expect(jsonData.Msg).t0.eql("Msg")
+pm.expect(jsonData.Msg).to.eql("Msg")
 
 pm.response.to.have.header("Content-Type")
 
@@ -121,6 +121,14 @@ const expectedObject = {
 pm.expect(pm.response.json()).to.deep.include(expectedObject);
 
 
+==================================================================================================================
+pm object
+
+pm.response.json()
+pm.response.text()
+pm.response.responseTime
+pm.response.code
+pm.environment.name
 
 
 ==================================================================================================================
