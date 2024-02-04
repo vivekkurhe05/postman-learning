@@ -30,15 +30,17 @@ This function allows you to send API calls. You need to specify the endpoint you
 the request method that you want to use, and a callback function
 pm.sendRequest({url: `url_here`, method:''}, callback_function)
 e.g. 
-pm.sendRequest({url:`${base_url}/blogposts/${post_id}`,method:'DELETE', function (err, response) {
-    pm.test("Delete Response is OK", function() {
-        pm.expect(response.status).to.eql('OK')
-    })
-
-    pm.test('Delete response body is empty', function() {
-        pm.expect(response.json()).to.eql({})
-    })
-}})
+const req_body = {
+    url: `${base_url}/Library/DeleteBook.php`,
+    method:'DELETE',
+    body: {
+        mode: 'raw',
+        raw: JSON.stringify({"ID": pm.collectionVariables.get("book_id")})
+    }
+}
+pm.sendRequest(req_body, function (err, response) {
+    console.log(err ? err : response.json());
+});
 
 
 ==================================================================================================================

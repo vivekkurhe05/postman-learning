@@ -1,0 +1,19 @@
+{
+    "data":[
+        {
+            "course": "Postman",
+            "price": 150,
+            "category": "JavaScript"
+        },
+        {
+            "course": "SoapUI",
+            "price": 25,
+            "category": "Groovy"
+        },
+        {
+            "course": "Rest Assured",
+            "price": 100,
+            "category": "Java"
+        }
+    ]
+}
